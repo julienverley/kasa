@@ -1,13 +1,18 @@
 import React from "react";
-import Logo from "../components/Logo";
-import Navigation from "../components/Navigation";
+import Counter from "../components/Counter";
+import Header from "../components/Header";
+import Banner from "../components/Banner";
+import Locations from "../components/Locations";
 
 const Home = () => {
   return (
     <div>
-      <Logo />
-      <Navigation />
-      <h1>Chez vous, partout et ailleurs</h1>
+      {/* <Logo /> */}
+      <Header />
+      <Banner />
+      <Locations />
+      <br />
+      <Counter initialOpen={true} />
     </div>
   );
 };

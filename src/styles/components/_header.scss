@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 54px 100px 63px 100px;
+
+    .navigation {
+        ul {
+            display: flex;
+            a {
+                text-decoration: none;
+                li {
+                    margin-left: 57px;
+                }
+             }
+        }
+    }
+}
+
+.nav-active li {
+    text-decoration: underline;
+}

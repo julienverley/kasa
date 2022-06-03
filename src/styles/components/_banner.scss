@@ -1,0 +1,18 @@
+// A faire : banner filtre gris opacité 0.3
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    margin: 0 100px 43px 100px;
+    border-radius: 25px;
+    height: 223px;
+    background: url(../../assets/img/banner_background.jpg) center/cover;
+    //background: url(../../assets/img/grey_background.jpg) center/cover;
+    
+    h1 {
+        color: $color-2; 
+        font-size: 48px;
+    }
+}
