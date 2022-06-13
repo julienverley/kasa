@@ -9,6 +9,8 @@ const Header = () => {
         <Logo />
       </div>
       <div className="navigation">
+        {/* Marco className={({ isActive }) => isActive && "nav-active"} 
+        ou : <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}  */}
         <ul>
           <NavLink
             to="/"

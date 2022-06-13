@@ -1,7 +1,7 @@
-.locations {
+.location-cards {
     //display: flex;
     //flex-wrap: wrap;    
-    margin: 0 100px;
+    margin: 43px 100px 0 100px;
     padding: 56px 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,17 +11,17 @@
 
     
 
-    .location-cards {
+    .location-card {
         position: relative;
         //background: url(../../assets/img/location_cards_background.jpg) center/cover;
         //box-shadow: 0px -10px 50px 0px black inset;
-        background-color: $color-1;        
+        //background-color: $color-1;        
         border-radius: 25px;
         height: 340px;
         width: 340px;
         margin: 0 auto;
         
-        .location-cards-title {
+        .location-card-title {
             position: absolute;
             color: white;
             font-weight: $font-medium;
@@ -31,26 +31,33 @@
             margin-right: 20px;
         }
 
+        img {
+            object-fit: cover;
+            height: 340px;
+            width: 340px;
+            border-radius: 25px;
+        }
+
     }
 
 }
 
 @media screen and (min-width: 2000px) {
-    .locations {
+    .location-cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
     } 
 }
 
 @media screen and (max-width: 1500px) {
-    .locations {
+    .location-cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
     } 
 }
 
 @media screen and (max-width: 1000px) {
-    .locations {
+    .location-cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
     } 

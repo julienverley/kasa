@@ -1,14 +1,14 @@
 import { apartments } from "../data/apartments";
+import LocationCard from "./LocationCard";
 import React from "react";
+
 
 const LocationCards = () => {
   return (
     <div>
-      <div className="locations">
+      <div className="location-cards">
         {apartments.map((apartment) => (
-          <div className="location-cards">
-            <div className="location-cards-title">{apartment.title}</div>
-          </div>
+          <LocationCard title={apartment.title} img={apartment.cover} />
         ))}
       </div>
     </div>

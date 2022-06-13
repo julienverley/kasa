@@ -1,18 +1,26 @@
 // A faire : banner filtre gris opacité 0.3
 
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
-    margin: 0 100px 43px 100px;
+    @include flexCenter; 
+    margin: 0 100px;
     border-radius: 25px;
     height: 223px;
-    background: url(../../assets/img/banner_background.jpg) center/cover;
-    //background: url(../../assets/img/grey_background.jpg) center/cover;
-    
+    position: relative; 
+    overflow: hidden;
+    //background: url(../../assets/img/banner_background.jpg) center/cover;
+    // faire directement dans le composant // position absolute
     h1 {
         color: $color-2; 
         font-size: 48px;
+        z-index: 1;
+    }
+    img {
+        margin: 0;
+        border-radius: 25px;
+        position: absolute;
+        object-fit: cover;
+        z-index: 0;
+        width: 100%;
+        //margin: 0 100px 43px 100px;
     }
 }

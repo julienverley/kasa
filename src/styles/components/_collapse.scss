@@ -1,4 +1,43 @@
 .collapse {
-    display: flex;
-    justify-content: space-between;
+
+    // color: white;
+    
+    margin: 31px 208px 43px 208px;
+
+
+    .collapse-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        height: 47px;
+        background-color: $color-1;
+        border-radius: 5px;
+
+        h3 {
+            color: white;
+            font-weight: 500;
+            font-size: 24px;
+            margin-left: 18px;
+        }
+
+        .button {
+            margin-right: 17px;
+            
+            #button-arrow {
+                color: white;
+            }
+        }
+    }
+
+    .collapse-text p {
+        color: $color-1;
+        background-color: $color-2;
+        //background-color: black;
+        z-index: 1;
+        padding: 36px 27px 19px 18px;
+        margin-top: -10px;
+        border-radius: 0 0 5px 5px;
+    }
 }
+
