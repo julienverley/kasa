@@ -1,0 +1,11 @@
+.slideshow-left-button-arrow {
+    position: absolute;
+    top: 149px;
+    right: 23px;
+}
+.slideshow-right-button-arrow {
+    position: absolute;
+    top: 149px;
+    left: 23px;
+    transform: rotate(180deg);
+}

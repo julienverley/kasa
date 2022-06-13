@@ -1,37 +1,47 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import { apartments } from "../data/apartments";
 
 const Location = () => {
+  let urlID = window.location.search.split("=")[1];
+  const location = apartments.find((apartment) => apartment.id === urlID);
+  if (!location) {
+    return <Navigate to="/404"></Navigate>;
+  }
+
   return (
     <div>
       <Header />
       <Slideshow />
       <div className="location-summary">
         <div className="location-summary-left">
-          <div className="location-summary-left-title">
-            {apartments[0].title}
-          </div>
+          <div className="location-summary-left-title">{location.title}</div>
           <div className="location-summary-left-location">
-            {apartments[0].location}
+            {location.location}
           </div>
+
+          {/* <div className="location-summary-left-tags">{location.tags[0]}</div> */}
           <div className="location-summary-left-tags">
-            {apartments[0].tags[0]}
+            {location.tags.map((tag) => (
+              <div className="location-summary-left-tag">{tag}</div>
+            ))}
           </div>
         </div>
         <div className="location-summary-right">
           <div className="location-summary-right-host">
             <div className="location-summary-right-host-name">
-              {apartments[0].host.name}
+              {location.host.name}
             </div>
             <div className="location-summary-right-host-picture">
-              <img src={apartments[0].host.picture} alt="" />
+              <img src={location.host.picture} alt="location host picture" />
             </div>
           </div>
+
           <div className="location-summary-right-rating">
-            {apartments[0].rating} stars SVG
+            {location.rating} stars SVG
           </div>
         </div>
       </div>
@@ -40,14 +50,16 @@ const Location = () => {
           <Collapse
             title="Description"
             initialOpened={false}
-            text={apartments[0].description}
+            text={location.description}
           />
         </div>
         <div className="location-collapse">
           <Collapse
             title="Équipements"
             initialOpened={false}
-            text={apartments[0].equipments}
+            text={location.equipments.map((equipement) => (
+              <div>{equipement}</div>
+            ))}
           />
         </div>
       </div>

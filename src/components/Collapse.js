@@ -14,10 +14,10 @@ const Collapse = ({ initialOpened, title, text, arrow }) => {
     <div className="collapse">
       <div className="collapse-header">
         <h3>{title}</h3>
-        <div className="button">
+        <div className="collapse-button-arrow">
           <div
-            id="button-arrow"
-            onClick={() => setIsOpened(!isOpened)} //Marco à revoir
+            id="collapse-button-arrow"
+            onClick={() => setIsOpened(!isOpened)} // A revoir
             // {isOpened && className="text-is-opened"}
             // classname={({ textIsOpenedText }) => textIsOpenedText && "text-is-opened"}
           >

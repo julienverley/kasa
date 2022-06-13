@@ -2,13 +2,16 @@ import { apartments } from "../data/apartments";
 import LocationCard from "./LocationCard";
 import React from "react";
 
-
 const LocationCards = () => {
   return (
     <div>
       <div className="location-cards">
         {apartments.map((apartment) => (
-          <LocationCard title={apartment.title} img={apartment.cover} />
+          <LocationCard
+            urlID={apartment.id}
+            title={apartment.title}
+            img={apartment.cover}
+          />
         ))}
       </div>
     </div>
@@ -16,11 +19,6 @@ const LocationCards = () => {
 };
 
 export default LocationCards;
-
-
-
-
-
 
 // // Version Axios, erreur : has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource
 
@@ -39,8 +37,6 @@ export default LocationCards;
 //       )
 //       .then((res) => setData(res.data));
 //   }, []);
-
-
 
 //   return (
 //     <div className="locations">
