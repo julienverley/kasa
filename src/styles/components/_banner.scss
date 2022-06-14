@@ -1,5 +1,3 @@
-// A faire : banner filtre gris opacité 0.3
-
 .banner {
     @include flexCenter; 
     margin: 0 100px;
@@ -7,12 +5,37 @@
     height: 223px;
     position: relative; 
     overflow: hidden;
-    //background: url(../../assets/img/banner_background.jpg) center/cover;
-    // faire directement dans le composant // position absolute
+
+    @media screen and (max-width: 1000px) {
+        margin: 20px 60px 0 60px;
+        border-radius: 15px;
+        height: 180px;
+    }
+    @media screen and (max-width: 700px) {
+        margin: 20px 40px 0 40px;
+        border-radius: 10px;
+        height: 140px;
+    }
+    @media screen and (max-width: 400px) {
+        margin: 20px 20px 0 20px;
+        height: 111px;
+    }
+    
     h1 {
         color: $color-2; 
         font-size: 48px;
         z-index: 1;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 36px;
+            margin: 0 16px;
+        }
+        @media screen and (max-width: 700px) {
+            font-size: 30px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 24px;
+        }
     }
     img {
         margin: 0;
@@ -21,6 +44,20 @@
         object-fit: cover;
         z-index: 0;
         width: 100%;
-        //margin: 0 100px 43px 100px;
+        height: 223px;
+
+        @media screen and (max-width: 1000px) {
+            border-radius: 15px;
+            height: 180px;
+
+        }
+        @media screen and (max-width: 700px) {
+            border-radius: 10px;
+            height: 140px;
+
+        }
+        @media screen and (max-width: 400px) {
+            height: 111px;
+        }
     }
 }

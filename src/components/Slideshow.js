@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { act } from "react-dom/test-utils";
 import { apartments } from "../data/apartments";
 import LogoFooter from "./LogoFooter";
 
 const Slideshow = () => {
+  // Get ID from URL
   let urlID = window.location.search.split("=")[1];
   const location = apartments.find((apartment) => apartment.id === urlID);
 
   const pictures = location.pictures;
   const [actualPicture, setActualPicture] = useState(pictures[0]);
+
+  console.log(actualPicture);
 
   // 1/ Retrouver l'index de la photo affichée
   // 2/ Mettre à jour l'état, actualPicture avec +1
@@ -16,7 +20,6 @@ const Slideshow = () => {
   const nextPicture = () => {
     pictures.find((picture) => picture === actualPicture);
     // pictures.find((picture, index) => picture === actualPicture);
-    console.log(actualPicture);
     setActualPicture(pictures[actualPicture + 1]);
     if (pictures.indexOf(actualPicture) >= pictures.length) {
       setActualPicture(pictures[0]);
@@ -31,7 +34,10 @@ const Slideshow = () => {
           src={actualPicture}
           alt="location cover"
         />
-        <div className="slideshow-left-button-arrow">
+        <div
+          className="slideshow-right-button-arrow"
+          // onClick={() => setActualPicture()}
+        >
           <svg
             width="48"
             height="80"
@@ -45,7 +51,7 @@ const Slideshow = () => {
             />
           </svg>
         </div>
-        <div className="slideshow-right-button-arrow">
+        <div className="slideshow-left-button-arrow">
           <svg
             width="48"
             height="80"

@@ -1,12 +1,15 @@
 .logo {
     width: 210px;
-    //height: 68px ;
     
+    @media screen and (max-width: 1000px) {
+        width: 180px;
+    }
+    @media screen and (max-width: 700px) {
+        width: 160px;
+    }
+    @media screen and (max-width: 400px) {
+        width: 145px;
+    }
+}
 
-}
-.logo-footer {
-    width: 122px;
-    //height: 39px ; 
-    padding-top: 66px;
-    // fill: white; // comment changer la couleur du logo SVG ?
-}
+

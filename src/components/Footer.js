@@ -5,9 +5,7 @@ import LogoFooter from "./LogoFooter";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="logo-footer">
-        <LogoFooter />
-      </div>
+      <LogoFooter />
       <div className="droits">2020 Kasa. All right reserved</div>
     </div>
   );

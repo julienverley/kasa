@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 //const Collapse = (props) => { // et props.initialOpened, props.title, props.arrow et props.text
-const Collapse = ({ initialOpened, title, text, arrow }) => {
+const Collapse = ({ initialOpened, title, text }) => {
   const [isOpened, setIsOpened] = useState(initialOpened);
-
-  // useEffect(() => {
-  //   console.log("L'ouverture a changé");
-  // }, [isOpened]);
 
   return (
     // && : élément généré que si la condition est respectée // set.. modifie l'état initial pour un !isOpen (donc pas ouvert), cf. collapses
-    // A faire : ajouter une class is-opened puis faire un rotate sur le arrow
     <div className="collapse">
       <div className="collapse-header">
         <h3>{title}</h3>
@@ -21,9 +16,7 @@ const Collapse = ({ initialOpened, title, text, arrow }) => {
                 ? "collapse-button-arrow-svg-opened"
                 : "collapse-button-arrow-svg"
             }
-            onClick={() => setIsOpened(!isOpened)} // A revoir
-            // {isOpened && className="text-is-opened"}
-            // className={({ textIsOpenedText }) => textIsOpenedText && "text-is-opened"}
+            onClick={() => setIsOpened(!isOpened)}
           >
             <svg
               width="24"
@@ -41,7 +34,7 @@ const Collapse = ({ initialOpened, title, text, arrow }) => {
         </div>
       </div>
       <div className="collapse-text">
-        {isOpened && <p className="collapse-text-is-opened">{text}</p>}
+        {isOpened && <div className="collapse-text-is-opened">{text}</div>}
       </div>
     </div>
   );

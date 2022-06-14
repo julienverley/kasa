@@ -57,8 +57,8 @@ const Location = () => {
           <Collapse
             title="Équipements"
             initialOpened={false}
-            text={location.equipments.map((equipement) => (
-              <div>{equipement}</div>
+            text={location.equipments.map((equipement, index) => (
+              <div key={index}>{equipement}</div>
             ))}
           />
         </div>

@@ -1,10 +1,29 @@
 .footer {
+    display: flex;
+    @include flexCenter;
     position: relative;
     background-color: black;
     height: 209px;
-}
-.droits {
-    position: absolute;
-    color: white;
-    margin-bottom: 29px;
+    margin-top: 30px;
+
+    .logo-footer {
+        width: 122px;
+        bottom: 107px;
+        
+        @media screen and (max-width: 400px) {
+            bottom: 110px;
+        }
+    }
+
+    .droits {
+        margin: 0;
+        bottom: 29px;
+        position: absolute;
+        color: white;
+    
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+            bottom: 62px;
+        }
+    }
 }
