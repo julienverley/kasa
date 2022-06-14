@@ -22,6 +22,8 @@
         height: 47px;
         background-color: $color-1;
         border-radius: 5px;
+        cursor: pointer;
+
 
         h3 {
             color: white;
@@ -42,7 +44,6 @@
 
         .collapse-button-arrow {
             margin-right: 17px;
-            cursor: pointer;
         
             .collapse-button-arrow-svg {
                 transform: rotate(0deg);

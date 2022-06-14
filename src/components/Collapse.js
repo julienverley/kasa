@@ -7,7 +7,7 @@ const Collapse = ({ initialOpened, title, text }) => {
   return (
     // && : élément généré que si la condition est respectée // set.. modifie l'état initial pour un !isOpen (donc pas ouvert), cf. collapses
     <div className="collapse">
-      <div className="collapse-header">
+      <div className="collapse-header" onClick={() => setIsOpened(!isOpened)}>
         <h3>{title}</h3>
         <div className="collapse-button-arrow">
           <div
@@ -16,7 +16,6 @@ const Collapse = ({ initialOpened, title, text }) => {
                 ? "collapse-button-arrow-svg-opened"
                 : "collapse-button-arrow-svg"
             }
-            onClick={() => setIsOpened(!isOpened)}
           >
             <svg
               width="24"

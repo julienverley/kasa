@@ -35,10 +35,12 @@
     position: absolute;
     top: 149px;
     right: 23px;
+    cursor: pointer;
 }
 .slideshow-right-button-arrow {
     position: absolute;
     top: 149px;
     left: 23px;
+    cursor: pointer;
     transform: rotate(180deg);
 }

@@ -1,3 +1,10 @@
+body {
+    // bottom stick to bottom
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 250px;
+}
+
 .footer {
     display: flex;
     @include flexCenter;
@@ -5,6 +12,11 @@
     background-color: black;
     height: 209px;
     margin-top: 30px;
+    
+    // bottom stick to bottom
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
     .logo-footer {
         width: 122px;

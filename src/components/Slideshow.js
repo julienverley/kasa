@@ -3,26 +3,34 @@ import { act } from "react-dom/test-utils";
 import { apartments } from "../data/apartments";
 import LogoFooter from "./LogoFooter";
 
-const Slideshow = () => {
-  // Get ID from URL
-  let urlID = window.location.search.split("=")[1];
-  const location = apartments.find((apartment) => apartment.id === urlID);
+// id vient directement des props
+const Slideshow = (props) => {
+  const location = apartments.find((apartment) => apartment.id === props.id);
 
   const pictures = location.pictures;
-  const [actualPicture, setActualPicture] = useState(pictures[0]);
+  const [actualPictureIndex, setActualPictureIndex] = useState(0);
 
-  console.log(actualPicture);
-
-  // 1/ Retrouver l'index de la photo affichée
+  // 1/ Retrouver l'index de la photo affichée // jouer avec l'index
   // 2/ Mettre à jour l'état, actualPicture avec +1
   // 3/ Quand index.lenght(fin), mettre à jour l'état avec la position 0
   // 4/ Onclick dans le SVG
   const nextPicture = () => {
-    pictures.find((picture) => picture === actualPicture);
+    //pictures.find((picture) => picture === actualPicture);
     // pictures.find((picture, index) => picture === actualPicture);
-    setActualPicture(pictures[actualPicture + 1]);
-    if (pictures.indexOf(actualPicture) >= pictures.length) {
-      setActualPicture(pictures[0]);
+    if (actualPictureIndex >= pictures.length - 1) {
+      setActualPictureIndex(0);
+    } else {
+      setActualPictureIndex(actualPictureIndex + 1);
+    }
+  };
+  const previousPicture = () => {
+    //pictures.find((picture) => picture === actualPicture);
+    // pictures.find((picture, index) => picture === actualPicture);
+    if (actualPictureIndex == pictures.length - pictures.length) {
+      // setActualPictureIndex(0);
+      setActualPictureIndex(pictures.length - 1);
+    } else {
+      setActualPictureIndex(actualPictureIndex - 1);
     }
   };
 
@@ -31,13 +39,10 @@ const Slideshow = () => {
       <div className="slideshow-pictures">
         <img
           className="slideshow-pictures-img"
-          src={actualPicture}
+          src={pictures[actualPictureIndex]}
           alt="location cover"
         />
-        <div
-          className="slideshow-right-button-arrow"
-          // onClick={() => setActualPicture()}
-        >
+        <div className="slideshow-right-button-arrow" onClick={previousPicture}>
           <svg
             width="48"
             height="80"
@@ -51,7 +56,7 @@ const Slideshow = () => {
             />
           </svg>
         </div>
-        <div className="slideshow-left-button-arrow">
+        <div className="slideshow-left-button-arrow" onClick={nextPicture}>
           <svg
             width="48"
             height="80"

@@ -1,8 +1,15 @@
 import { apartments } from "../data/apartments";
 import LocationCard from "./LocationCard";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const LocationCards = () => {
+  const [appartments, setAppartments] = useState([]);
+
+  useEffect(() => {
+    // fetch()
+    //.then((response) => response.json())
+    //.then((data) => setAppartments(data))
+  }, []);
   return (
     <div>
       <div className="location-cards">
@@ -33,7 +40,7 @@ export default LocationCards;
 //     // hook
 //     axios
 //       .get(
-//         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json"
+//         "/logements.json"
 //         //"https://restcountries.com/v3.1/all"
 //       )
 //       .then((res) => setData(res.data));

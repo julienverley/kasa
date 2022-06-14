@@ -1,13 +1,14 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import { apartments } from "../data/apartments";
 
 const Location = () => {
-  let urlID = window.location.search.split("=")[1];
-  const location = apartments.find((apartment) => apartment.id === urlID);
+  const params = useParams();
+  const location = apartments.find((apartment) => apartment.id === params.id);
   if (!location) {
     return <Navigate to="/404"></Navigate>;
   }
@@ -15,7 +16,7 @@ const Location = () => {
   return (
     <div>
       <Header />
-      <Slideshow />
+      <Slideshow id={params.id} />
       <div className="location-summary">
         <div className="location-summary-left">
           <div className="location-summary-left-title">{location.title}</div>
@@ -63,6 +64,7 @@ const Location = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
