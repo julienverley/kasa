@@ -22,11 +22,11 @@ const Location = () => {
           <div className="location-summary-left-location">
             {location.location}
           </div>
-
-          {/* <div className="location-summary-left-tags">{location.tags[0]}</div> */}
           <div className="location-summary-left-tags">
-            {location.tags.map((tag) => (
-              <div className="location-summary-left-tag">{tag}</div>
+            {location.tags.map((tag, index) => (
+              <div key={index} className="location-summary-left-tag">
+                {tag}
+              </div>
             ))}
           </div>
         </div>

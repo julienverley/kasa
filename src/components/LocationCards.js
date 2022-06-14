@@ -6,8 +6,9 @@ const LocationCards = () => {
   return (
     <div>
       <div className="location-cards">
-        {apartments.map((apartment) => (
+        {apartments.map((apartment, index) => (
           <LocationCard
+            key={index}
             urlID={apartment.id}
             title={apartment.title}
             img={apartment.cover}

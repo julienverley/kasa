@@ -1,3 +1,15 @@
+.slideshow-pictures {
+    margin: -43px 100px 0 100px;
+    position: relative;
+
+    img {
+        height: 415px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 25px;
+    }
+}
+
 .slideshow-left-button-arrow {
     position: absolute;
     top: 149px;

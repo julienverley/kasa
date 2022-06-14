@@ -16,10 +16,14 @@ const Collapse = ({ initialOpened, title, text, arrow }) => {
         <h3>{title}</h3>
         <div className="collapse-button-arrow">
           <div
-            id="collapse-button-arrow"
+            className={
+              isOpened
+                ? "collapse-button-arrow-svg-opened"
+                : "collapse-button-arrow-svg"
+            }
             onClick={() => setIsOpened(!isOpened)} // A revoir
             // {isOpened && className="text-is-opened"}
-            // classname={({ textIsOpenedText }) => textIsOpenedText && "text-is-opened"}
+            // className={({ textIsOpenedText }) => textIsOpenedText && "text-is-opened"}
           >
             <svg
               width="24"

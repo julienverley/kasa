@@ -23,9 +23,13 @@
         .collapse-button-arrow {
             margin-right: 17px;
             cursor: pointer;
-            
-            #collapse-button-arrow {
-                color: white;
+        
+            .collapse-button-arrow-svg {
+                transform: rotate(0deg);
+            }
+
+            .collapse-button-arrow-svg-opened {
+                transform: rotate(180deg);
             }
         }
     }

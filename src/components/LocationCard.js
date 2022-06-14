@@ -5,7 +5,7 @@ const LocationCard = (props) => {
   return (
     <div className="location-card">
       <NavLink to={"/location/?id=" + props.urlID} className="nav-location">
-        <img classname="location-card-img" src={props.img} />
+        <img className="location-card-img" src={props.img} />
         <div className="location-card-title">{props.title}</div>
       </NavLink>
     </div>
