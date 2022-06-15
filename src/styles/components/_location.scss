@@ -4,68 +4,174 @@
     justify-content: space-between;
 
     @media screen and (max-width: 1000px) {
-            
+        flex-direction: column;
+        margin: 30px 60px 0 60px;
     }
     @media screen and (max-width: 700px) {
-        
+        margin: 30px 40px 0 40px;
     }
     @media screen and (max-width: 400px) {
-       
+        margin: 30px 20px 0 20px;
     }
 
     .location-summary-left-title {
-        font-size: 36px;
         font-weight: 500;
-        height: 51px;
+        font-size: 36px;
+        // height: 51px;
+        
+        @media screen and (max-width: 1000px) {
+            // height: 46px;
+            font-size: 30px;
+        }
+        @media screen and (max-width: 700px) {
+            font-size: 24px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 18px;
+        }
     }
 
     .location-summary-left-location {
-        font-size: 18px;
         font-weight: 500;
+        font-size: 18px;
         height: 26px;
+        
+        @media screen and (max-width: 1000px) {
+        }
+        @media screen and (max-width: 700px) {
+            font-size: 16px;
+            height: 22px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 14px;
+        }
     }
 
     .location-summary-left-tags {
         display: flex;
-        margin-top: 20px;
+        flex-wrap: wrap;
+        
+        @media screen and (max-width: 1000px) {
+        }
+        @media screen and (max-width: 700px) {
+        }
+        @media screen and (max-width: 400px) {
+        }
 
         .location-summary-left-tag {
             @include flexCenter; 
+            background-color: $color-1;
+            color: white;
             height: 25px;
             min-width: 115px;
-            margin-right: 10px;
+            margin: 20px 10px 0 0;
             padding: 0 10px;
-            color: white;
             font-size: 14px;
-            background-color: $color-1;
             border-radius: 10px;
+
+            @media screen and (max-width: 1000px) {
+                height: 22px;
+                min-width: 100px;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+            @media screen and (max-width: 700px) {
+                height: 20px;
+                min-width: 90px;
+                font-size: 11px;
+                border-radius: 5px;
+            }
+            @media screen and (max-width: 400px) {
+                height: 18px;
+                min-width: 84px;
+                font-size: 10px;
+            }
         }
     }
 
-    .location-summary-right-host {
+    .location-summary-right {
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        flex-direction: row-reverse;
+        justify-content: space-between;
 
-        .location-summary-right-host-name {
-            margin-right: 5px;
-            width: 100px;
+
+        .location-summary-right-host {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            @media screen and (max-width: 1000px) {
+                margin-top: 25px;
+            }
+            @media screen and (max-width: 700px) {
+            }
+            @media screen and (max-width: 400px) {
+            }
+    
+            .location-summary-right-host-name {
+                margin-right: 5px;
+                width: 100px;
+                text-align: end;
+    
+                @media screen and (max-width: 1000px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 700px) {
+                    font-size: 13px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 12px;
+                }
+            }
         }
-    }
-
-    .location-summary-right-stars {
-        @include flexCenter;
-        margin-top: 24px;
-
-        svg {
-            margin-left: 10px;
+    
+        .location-summary-right-stars {
+            @include flexCenter;
+            margin-top: 24px;
+    
+            @media screen and (max-width: 1000px) {
+                justify-content: flex-start;
+                align-items: center;
+            }
+            @media screen and (max-width: 700px) {
+            }
+            @media screen and (max-width: 400px) {
+            }
+    
+            svg {
+                margin-left: 10px;
+    
+                @media screen and (max-width: 1000px) {
+                    height: 25px;
+                    width: 25px;
+                }
+                @media screen and (max-width: 700px) {
+                    height: 20px;
+                    width: 20px;
+                }
+                @media screen and (max-width: 400px) {
+                    margin-left: 5px;
+                    height: 15px;
+                    width: 15px;
+                }
+            }
         }
-    }
-
-    .location-summary-right-host-picture img {
-        border-radius: 100px;
-        object-fit: cover;
-        width: 64px;
-        margin-left: 5px;
+    
+        .location-summary-right-host-picture img {
+            border-radius: 100px;
+            object-fit: cover;
+            width: 64px;
+            margin-left: 5px;
+    
+            @media screen and (max-width: 1000px) {
+                width: 48px;
+            }
+            @media screen and (max-width: 700px) {
+                width: 40px;
+            }
+            @media screen and (max-width: 400px) {
+                width: 32px;
+            }
+        }
     }
 }
