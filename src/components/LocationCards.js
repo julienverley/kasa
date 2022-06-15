@@ -3,12 +3,13 @@ import LocationCard from "./LocationCard";
 import React, { useState, useEffect } from "react";
 
 const LocationCards = () => {
-  const [appartments, setAppartments] = useState([]);
+  // Antoine
+  const [aparts, setAparts] = useState([]);
 
   useEffect(() => {
     // fetch()
     //.then((response) => response.json())
-    //.then((data) => setAppartments(data))
+    //.then((data) => setApartments(data))
   }, []);
   return (
     <div>

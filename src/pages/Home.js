@@ -18,7 +18,7 @@ const Home = () => {
       <LocationCards />
       <br />
       <Footer />
-      <Counter initialOpen={true} />
+      {/* <Counter initialOpen={true} /> */}
     </div>
   );
 };

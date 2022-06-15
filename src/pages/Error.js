@@ -7,8 +7,12 @@ const Error = () => {
     <div>
       <Header />
       <div className="error404">404</div>
-      <h2 className="error-message">Oups ! La page que vous demandez n'existe pas.</h2>
-      <NavLink to="/"><h4 className="error-link">Retourner sur la page d'accueil</h4></NavLink>
+      <h2 className="error-message">
+        Oups ! La page que vous demandez n'existe pas.
+      </h2>
+      <NavLink to="/">
+        <h4 className="error-link">Retourner sur la page d'accueil</h4>
+      </NavLink>
     </div>
   );
 };

@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <Logo />
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
       </div>
       <div className="navigation">
         {/* A revoir : className={({ isActive }) => isActive && "nav-active"} 

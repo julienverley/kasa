@@ -44,7 +44,8 @@
 
     .location-summary-right-host {
         display: flex;
-        @include flexCenter;
+        align-items: center;
+        justify-content: flex-end;
 
         .location-summary-right-host-name {
             margin-right: 5px;
@@ -52,9 +53,13 @@
         }
     }
 
-    .location-summary-right-rating {
+    .location-summary-right-stars {
         @include flexCenter;
         margin-top: 24px;
+
+        svg {
+            margin-left: 10px;
+        }
     }
 
     .location-summary-right-host-picture img {

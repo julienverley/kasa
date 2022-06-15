@@ -5,18 +5,16 @@ import LogoFooter from "./LogoFooter";
 
 // id vient directement des props
 const Slideshow = (props) => {
+  // Get
   const location = apartments.find((apartment) => apartment.id === props.id);
 
   const pictures = location.pictures;
-  const [actualPictureIndex, setActualPictureIndex] = useState(0);
+  const [actualPictureIndex, setActualPictureIndex] = useState(0); // Utiliser l'index et pas l'image elle-même
 
-  // 1/ Retrouver l'index de la photo affichée // jouer avec l'index
-  // 2/ Mettre à jour l'état, actualPicture avec +1
-  // 3/ Quand index.lenght(fin), mettre à jour l'état avec la position 0
-  // 4/ Onclick dans le SVG
+  // 1/ Retrouver l'index de la photo affichée
+  // 2/ Mettre à jour l'état de l'index, actualPictureIndex avec + 1, - 1, fin du tableau etc.
+  // 3/ Onclick autour du SVG
   const nextPicture = () => {
-    //pictures.find((picture) => picture === actualPicture);
-    // pictures.find((picture, index) => picture === actualPicture);
     if (actualPictureIndex >= pictures.length - 1) {
       setActualPictureIndex(0);
     } else {
@@ -24,15 +22,14 @@ const Slideshow = (props) => {
     }
   };
   const previousPicture = () => {
-    //pictures.find((picture) => picture === actualPicture);
-    // pictures.find((picture, index) => picture === actualPicture);
     if (actualPictureIndex == pictures.length - pictures.length) {
-      // setActualPictureIndex(0);
       setActualPictureIndex(pictures.length - 1);
     } else {
       setActualPictureIndex(actualPictureIndex - 1);
     }
   };
+
+  console.log(pictures.length);
 
   return (
     <div>
@@ -41,8 +38,19 @@ const Slideshow = (props) => {
           className="slideshow-pictures-img"
           src={pictures[actualPictureIndex]}
           alt="location cover"
-        />
-        <div className="slideshow-right-button-arrow" onClick={previousPicture}>
+        />        
+        <div> 
+          <div className="slideshow-counter">
+            {actualPictureIndex + 1}/{pictures.length}
+          </div>
+        </div>
+
+        {/* A revoir si 1 seule picture */}
+        {/* removeChild ? */}
+        <div
+          className={pictures.length > 1 ? "slideshow-left-button-arrow" : "slideshow-left-button-arrow-display-none"}
+          onClick={previousPicture}
+        >
           <svg
             width="48"
             height="80"
@@ -56,7 +64,12 @@ const Slideshow = (props) => {
             />
           </svg>
         </div>
-        <div className="slideshow-left-button-arrow" onClick={nextPicture}>
+        {/* A revoir si 1 seule picture */}
+        {/* removeChild ? */}
+        <div
+          className={pictures.length > 1 ? "slideshow-right-button-arrow" : "slideshow-right-button-arrow-display-none"}
+          onClick={nextPicture}
+        >
           <svg
             width="48"
             height="80"
