@@ -3,13 +3,12 @@ import React from "react";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Counter from "../components/Counter";
 
 const About = () => {
   return (
     <div>
       <Header />
-      <Banner imageBg={"./kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg"} />
+      <Banner imageBackground={"./banner_background_about.jpg"} />
       <div className="about-collapse">
         <Collapse
           title="Fiabilité"

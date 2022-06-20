@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-//const Collapse = (props) => { // et props.initialOpened, props.title, props.arrow et props.text
 const Collapse = ({ initialOpened, title, text }) => {
   const [isOpened, setIsOpened] = useState(initialOpened);
 
   return (
-    // && : élément généré que si la condition est respectée // set.. modifie l'état initial pour un !isOpen (donc pas ouvert), cf. collapses
     <div className="collapse">
       <div className="collapse-header" onClick={() => setIsOpened(!isOpened)}>
         <h3>{title}</h3>

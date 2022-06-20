@@ -9,7 +9,7 @@ const Slideshow = (props) => {
   const location = apartments.find((apartment) => apartment.id === props.id);
 
   const pictures = location.pictures;
-  const [actualPictureIndex, setActualPictureIndex] = useState(0); 
+  const [actualPictureIndex, setActualPictureIndex] = useState(0);
   // Utiliser l'index et pas l'image elle-même
 
   // 1/ Retrouver l'index de la photo affichée
@@ -37,14 +37,18 @@ const Slideshow = (props) => {
           className="slideshow-pictures-img"
           src={pictures[actualPictureIndex]}
           alt="location cover"
-        />        
-        <div> 
+        />
+        <div>
           <div className="slideshow-counter">
             {actualPictureIndex + 1}/{pictures.length}
           </div>
         </div>
         <div
-          className={pictures.length > 1 ? "slideshow-left-button-arrow" : "slideshow-left-button-arrow-display-none"}
+          className={
+            pictures.length > 1
+              ? "slideshow-left-button-arrow"
+              : "slideshow-left-button-arrow-display-none"
+          }
           onClick={previousPicture}
         >
           <svg
@@ -61,7 +65,11 @@ const Slideshow = (props) => {
           </svg>
         </div>
         <div
-          className={pictures.length > 1 ? "slideshow-right-button-arrow" : "slideshow-right-button-arrow-display-none"}
+          className={
+            pictures.length > 1
+              ? "slideshow-right-button-arrow"
+              : "slideshow-right-button-arrow-display-none"
+          }
           onClick={nextPicture}
         >
           <svg

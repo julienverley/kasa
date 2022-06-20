@@ -9,8 +9,8 @@ const Home = () => {
     <div>
       <Header />
       <Banner
+        imageBackground={"./banner_background_home.jpg"}
         title="Chez vous, partout et ailleurs"
-        imageBg={"./banner_background.jpg"}
       />
       <LocationCards />
       <br />

@@ -3,10 +3,8 @@ import LocationCard from "./LocationCard";
 import axios from "axios";
 
 const LocationCards = () => {
-  const [data, setData] = useState([]); // useState = hook // const [... : variable React
-  // Le useEffect se joue dès que le composant est monté
+  const [data, setData] = useState([]);
   useEffect(() => {
-    // hook
     axios
       .get(
         "/logements.json"

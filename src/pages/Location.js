@@ -8,8 +8,10 @@ import Slideshow from "../components/Slideshow";
 import { apartments } from "../data/apartments";
 
 const Location = () => {
+  // Get dynamic params from the current URL:
   const params = useParams();
-  const location = apartments.find((apartment) => apartment.id === params.id); //
+  // Get the apartment with the right id :
+  const location = apartments.find((apartment) => apartment.id === params.id);
   if (!location) {
     return <Navigate to="/404"></Navigate>;
   }
@@ -43,8 +45,7 @@ const Location = () => {
           </div>
 
           <div className="location-summary-right-stars">
-            {location.rating}
-            <Rating />
+            <Rating rating={location.rating}/>
           </div>
         </div>
       </div>
