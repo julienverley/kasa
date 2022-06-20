@@ -3,13 +3,13 @@ import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Rating from "../components/Rating";
 import Slideshow from "../components/Slideshow";
 import { apartments } from "../data/apartments";
 
 const Location = () => {
-  // Antoine
-  const params = useParams(); // The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>
-  const location = apartments.find((apartment) => apartment.id === params.id);
+  const params = useParams();
+  const location = apartments.find((apartment) => apartment.id === params.id); //
   if (!location) {
     return <Navigate to="/404"></Navigate>;
   }
@@ -44,66 +44,7 @@ const Location = () => {
 
           <div className="location-summary-right-stars">
             {location.rating}
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                fill="#E3E3E3"
-              />
-            </svg>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                fill="#E3E3E3"
-              />
-            </svg>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                fill="#E3E3E3"
-              />
-            </svg>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                fill="#E3E3E3"
-              />
-            </svg>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-                fill="#E3E3E3"
-              />
-            </svg>
+            <Rating />
           </div>
         </div>
       </div>

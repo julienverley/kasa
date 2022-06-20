@@ -1,4 +1,4 @@
-// About.js
+// Specific to About.js
 .about-collapse {
     margin: 31px 208px 43px 208px;
 
@@ -13,6 +13,7 @@
     }
 }
 
+// All collapses
 .collapse-header {
         position: relative;
         display: flex;
@@ -54,10 +55,8 @@
             margin-right: 17px;
 
             @media screen and (max-width: 1000px) {
-                    
             }
             @media screen and (max-width: 700px) {
-             
             }
             @media screen and (max-width: 400px) {
                 margin-right: 7px;
@@ -65,10 +64,8 @@
 
             div svg {
                 @media screen and (max-width: 1000px) {
-                    
                 }
                 @media screen and (max-width: 700px) {
-                 
                 }
                 @media screen and (max-width: 400px) {
                  width: 15px;
@@ -78,7 +75,7 @@
             .collapse-button-arrow-svg {
                 transform: rotate(0deg);
             }
-
+            
             .collapse-button-arrow-svg-opened {
                 transform: rotate(180deg);
             }

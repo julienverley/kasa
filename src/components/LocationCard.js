@@ -5,7 +5,7 @@ const LocationCard = (props) => {
   return (
     <div className="location-card">
       <NavLink to={"/location/" + props.urlID} className="nav-location">
-        <img className="location-card-img" src={props.img} />
+        <img className="location-card-img" src={props.coverImage} />
         <div className="location-card-title">{props.title}</div>
       </NavLink>
     </div>
@@ -13,9 +13,3 @@ const LocationCard = (props) => {
 };
 
 export default LocationCard;
-
-// Projet 6
-//  // On click event, URL
-//  userCardDOM.addEventListener('click', () => {
-//   window.location.href = `photographer.html?id=${photographer.id}`;
-// });
