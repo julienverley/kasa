@@ -4,15 +4,16 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error from './pages/Error';
 import Location from './pages/Location';
+import { home, about, location } from './routes';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path={home} element={<Home />} />
+        <Route path={about} element={<About />} />
+        <Route path={location} element={<Location />} />
         <Route path="*" element={<Error />} />
-        <Route path="/location/:id" element={<Location />} />
       </Routes>
     </BrowserRouter>
   );

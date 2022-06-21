@@ -40,7 +40,7 @@ const Location = () => {
               {location.host.name}
             </div>
             <div className="location-summary-right-host-picture">
-              <img src={location.host.picture} alt="location host picture" />
+              <img src={location.host.picture} alt="location host" />
             </div>
           </div>
 

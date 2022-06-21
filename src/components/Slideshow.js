@@ -14,7 +14,7 @@ const Slideshow = (props) => {
     }
   };
   const previousPicture = () => {
-    if (actualPictureIndex == pictures.length - pictures.length) {
+    if (actualPictureIndex === pictures.length - pictures.length) {
       setActualPictureIndex(pictures.length - 1);
     } else {
       setActualPictureIndex(actualPictureIndex - 1);

@@ -7,24 +7,14 @@ const Rating = ({ rating }) => {
   const rate = parseInt(rating);
 
   for (let i = 0; i < 5; i++) {
-    if (i < rate)
-      stars.push(
-        <img
-          src={rating_star_full}
-          alt="full rating star"
-          key={i}
-          className="location-summary-right-stars-img"
-        />
-      );
-    else
-      stars.push(
-        <img
-          src={rating_star_empty}
-          alt="empty rating star"
-          key={i}
-          className="location-summary-right-stars-img"
-        />
-      );
+    stars.push(
+      <img
+        src={i < rate ? rating_star_full : rating_star_empty}
+        alt="full rating star"
+        key={i}
+        className="location-summary-right-stars-img"
+      />
+    );
   }
   return <div>{stars}</div>;
 };
