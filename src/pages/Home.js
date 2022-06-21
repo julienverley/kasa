@@ -13,7 +13,6 @@ const Home = () => {
         title="Chez vous, partout et ailleurs"
       />
       <LocationCards />
-      <br />
       <Footer />
     </div>
   );

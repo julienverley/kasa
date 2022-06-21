@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import Logo from "./Logo";
 import LogoFooter from "./LogoFooter";
 
 const Footer = () => {
   return (
     <div className="footer">
       <LogoFooter />
-      <div className="droits">2020 Kasa. All right reserved</div>
+      <div className="droits">© 2020 Kasa. All right reserved
+      </div>
     </div>
   );
 };
