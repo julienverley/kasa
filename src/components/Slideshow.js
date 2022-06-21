@@ -1,20 +1,11 @@
 import React, { useState } from "react";
-import { act } from "react-dom/test-utils";
 import { apartments } from "../data/apartments";
-import LogoFooter from "./LogoFooter";
 
-// id vient directement des props
 const Slideshow = (props) => {
-  // Get
   const location = apartments.find((apartment) => apartment.id === props.id);
-
   const pictures = location.pictures;
   const [actualPictureIndex, setActualPictureIndex] = useState(0);
-  // Utiliser l'index et pas l'image elle-même
 
-  // 1/ Retrouver l'index de la photo affichée
-  // 2/ Mettre à jour l'état de l'index, actualPictureIndex avec + 1, - 1, fin du tableau etc.
-  // 3/ Onclick autour du SVG
   const nextPicture = () => {
     if (actualPictureIndex >= pictures.length - 1) {
       setActualPictureIndex(0);
