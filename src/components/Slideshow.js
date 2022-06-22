@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { apartments } from "../data/apartments";
 
-const Slideshow = (props) => {
-  const location = apartments.find((apartment) => apartment.id === props.id);
+const Slideshow = ({ id }) => {
+  const location = apartments.find((apartment) => apartment.id === id);
   const pictures = location.pictures;
   const [actualPictureIndex, setActualPictureIndex] = useState(0);
 

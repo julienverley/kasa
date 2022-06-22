@@ -1,10 +1,10 @@
 import React from "react";
 
-const Banner = (props) => {
+const Banner = ({ imageBackground, title }) => {
   return (
     <div className="banner">
-      <img src={props.imageBackground} alt="banner background" />
-      <h1>{props.title}</h1>
+      <img src={imageBackground} alt="banner background" />
+      <h1>{title}</h1>
       <br />
     </div>
   );
