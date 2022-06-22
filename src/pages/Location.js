@@ -3,15 +3,15 @@ import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import logements from "../logements.json";
 import Rating from "../components/Rating";
 import Slideshow from "../components/Slideshow";
-import { apartments } from "../data/apartments";
 
 const Location = () => {
   // Get dynamic params from the current URL:
   const params = useParams();
   // Get the apartment with the right id :
-  const location = apartments.find((apartment) => apartment.id === params.id);
+  const location = logements.find((apartment) => apartment.id === params.id);
   if (!location) {
     return <Navigate to="/404"></Navigate>;
   }
@@ -45,7 +45,7 @@ const Location = () => {
           </div>
 
           <div className="location-summary-right-stars">
-            <Rating rating={location.rating}/>
+            <Rating rating={location.rating} />
           </div>
         </div>
       </div>
