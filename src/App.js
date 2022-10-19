@@ -6,7 +6,7 @@ import Error from "./pages/Error";
 import Location from "./pages/Location";
 //
 // import { home, about, location } from "./routes";
-import { about, location } from "./routes";
+import { home, about, location } from "./routes";
 //
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         {/* <Route path={home} element={<Home />} />
         <Route path={about} element={<About />} />
         <Route path={location} element={<Location />} /> */}
-        <Route path={process.env.REACT_APP_FOR_PATH} element={<Home />} />
+        <Route path={home} element={<Home />} />
         <Route path={about} element={<About />} />
         <Route path={location} element={<Location />} />
         <Route path="*" element={<Error />} />
