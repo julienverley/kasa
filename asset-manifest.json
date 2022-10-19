@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/julien_verley_11_062022/static/css/main.7fc6d333.css",
-    "main.js": "/julien_verley_11_062022/static/js/main.83ce035c.js",
-    "static/js/787.675a3ef5.chunk.js": "/julien_verley_11_062022/static/js/787.675a3ef5.chunk.js",
-    "static/media/Montserrat-Medium.ttf": "/julien_verley_11_062022/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
-    "static/media/Montserrat-Bold.ttf": "/julien_verley_11_062022/static/media/Montserrat-Bold.63fae500fdcf19ce83d4.ttf",
-    "static/media/Montserrat-Regular.ttf": "/julien_verley_11_062022/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
-    "index.html": "/julien_verley_11_062022/index.html",
-    "main.7fc6d333.css.map": "/julien_verley_11_062022/static/css/main.7fc6d333.css.map",
-    "main.83ce035c.js.map": "/julien_verley_11_062022/static/js/main.83ce035c.js.map",
-    "787.675a3ef5.chunk.js.map": "/julien_verley_11_062022/static/js/787.675a3ef5.chunk.js.map"
+    "main.css": "./static/css/main.7f6e9a5d.css",
+    "main.js": "./static/js/main.d6f28513.js",
+    "static/js/787.675a3ef5.chunk.js": "./static/js/787.675a3ef5.chunk.js",
+    "static/media/Montserrat-Medium.ttf": "./static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
+    "static/media/Montserrat-Bold.ttf": "./static/media/Montserrat-Bold.63fae500fdcf19ce83d4.ttf",
+    "static/media/Montserrat-Regular.ttf": "./static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
+    "index.html": "./index.html",
+    "main.7f6e9a5d.css.map": "./static/css/main.7f6e9a5d.css.map",
+    "main.d6f28513.js.map": "./static/js/main.d6f28513.js.map",
+    "787.675a3ef5.chunk.js.map": "./static/js/787.675a3ef5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fc6d333.css",
-    "static/js/main.83ce035c.js"
+    "static/css/main.7f6e9a5d.css",
+    "static/js/main.d6f28513.js"
   ]
 }
