@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+//
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
@@ -10,19 +12,22 @@ import { home, about, location } from "./routes";
 //
 
 const App = () => {
+  //
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Local routes paths */}
-        {/* <Route path={home} element={<Home />} />
+    <>
+      <Router>
+        <Routes>
+          {/* Local routes paths */}
+          {/* <Route path={home} element={<Home />} />
         <Route path={about} element={<About />} />
         <Route path={location} element={<Location />} /> */}
-        <Route path={home} element={<Home />} />
-        <Route path={about} element={<About />} />
-        <Route path={location} element={<Location />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path={home} element={<Home />} />
+          <Route path={about} element={<About />} />
+          <Route path={location} element={<Location />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+    </>
   );
 };
 
