@@ -17,7 +17,7 @@ const App = () => {
         {/* <Route path={home} element={<Home />} />
         <Route path={about} element={<About />} />
         <Route path={location} element={<Location />} /> */}
-        <Route path={process.env.REACT_APP_FOR_PATH + "/"} element={<Home />} />
+        <Route path={process.env.REACT_APP_FOR_PATH} element={<Home />} />
         <Route path={about} element={<About />} />
         <Route path={location} element={<Location />} />
         <Route path="*" element={<Error />} />
