@@ -1,7 +1,7 @@
 {
   "name": "p11_kasa_verley_julien",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
