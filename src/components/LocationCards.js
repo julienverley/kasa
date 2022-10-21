@@ -5,7 +5,7 @@ import axios from "axios";
 const LocationCards = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("/logements.json").then((res) => setData(res.data));
+    axios.get("./logements.json").then((res) => setData(res.data));
     //axios.get("/logements.json").then((res) => console.log(res.data));
   }, []);
   //console.log(data);
