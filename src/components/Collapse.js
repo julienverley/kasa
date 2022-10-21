@@ -15,7 +15,7 @@ const Collapse = ({ initialOpened, title, text }) => {
                 : "collapse-button-arrow-svg"
             }
           >
-            <img src="/arrow-collapse.svg" alt="arrow collapse" />
+            <img src="./arrow-collapse.svg" alt="arrow collapse" />
           </div>
         </div>
       </div>
