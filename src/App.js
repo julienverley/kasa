@@ -15,7 +15,8 @@ const App = () => {
   //
   return (
     <>
-      <Router>
+      {/* <Router> */}
+      <Router baseline="/">
         <Routes>
           {/* Local routes paths */}
           {/* <Route path={home} element={<Home />} />
