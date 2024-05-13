@@ -19,7 +19,7 @@ Julien Verley
 
 ### Visit on GitHub pages
 
-https://julfrontdev.github.io/julien_verley_11_062022/
+https://julienverley.github.io/kasa/
 
 ### Install on your computer
 
